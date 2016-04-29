@@ -127,10 +127,10 @@ class Record(object):
             time.sleep(3)
         self.recorder.terminate()
         (stdout, stderr) = self.recorder.communicate(None)
-        logger.debug("stdout from ffmpeg: ".format(stdout))
-        logger.debug("stderr from ffmpeg: ".format(stdout))
+        logger.debug("stdout from ffmpeg: {}".format(stdout))
+        logger.debug("stderr from ffmpeg: {}".format(stdout))
         returncode = self.recorder.wait()
-        logger.debug("Exit level from ffmpeg: ".format(returncode))
+        logger.debug("Exit level from ffmpeg: {}".format(returncode))
         if self.terminate_x:
             self.xvfb.stop()
 
